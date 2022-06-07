@@ -1,0 +1,281 @@
+:root {
+  --primeri-background-color: #f8e2d3;
+  --primeri-text-color: #272425;
+  --aside-text-color: #e6ccd8;
+  --aside-title-color: #e7c195;
+  --aside-background-color: #3f4b5a;
+  --title-text-color: #757575;
+  --accent-color: #2196f3;
+  --accent-white: #ffffff;
+}
+
+h1 {
+  text-align: center;
+}
+a {
+  text-decoration: none; /* Отменяем подчеркивание у ссылки */
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  color: var(--aside-text-color);
+}
+
+a:focus,
+a:hover  {
+  color: var(--accent-color);
+}
+
+li,
+p {
+  list-style-type: none;
+  margin: 5px;
+  margin-left: 15px;
+  padding: 0;
+  /* Убираем маркеры */
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+ul {
+  margin-left: 0;
+  /* Отступ слева в браузере IE и Opera */
+  padding-left: 0;
+  /* Отступ слева в браузере Firefox, Safari, Chrome */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--primeri-background-color);
+  color: var(--primeri-text-color);
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 60px 100px 420px 130px 250px 130px 110px;
+
+}  
+
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;   
+}
+
+hr {
+  margin: 0 auto;
+  margin-bottom: 10px;
+  size: 2;
+  color: #0000dd;
+}
+
+.my-foto {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+  margin-top: 20px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px grey, 0 0 13px #333;
+}
+
+ 
+/*-------- BUTTON--------------*/
+.menu-button {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: transparent;
+  margin-left: 245px;
+}
+
+.icon-menu,
+.icon-close {
+  fill:  var(--primeri-text-color);
+}
+
+.icon-close:hover,
+.icon-close:focus {
+  fill: var(--accent-color);
+}
+
+.icon-menu:hover,
+.icon-menu:focus {
+  fill: var(--accent-color);
+}
+
+.menu-button .icon-close {
+  display: none;
+}
+
+.menu-button.is-open .icon-close {
+  display: block;
+}
+
+.menu-button.is-open .icon-menu {
+  display: none;
+}
+
+.menu-container {
+  z-index: 1;
+  display: none;
+  position: absolute;
+  border-top: 1px solid #ececec;
+  left: 8px;
+  width: 95%;
+  height: 220px;
+  text-align: center;
+  background:var(--primeri-background-color);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+    0px 1px 3px rgba(0, 0, 0, 0.16);
+
+}
+
+.menu-container.is-open{
+  display: block;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  color: var(--aside-title-color);
+}
+
+/*-------- HEADER--------------*/
+.page-header {
+  background-color: var(--primeri-background-color);
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+
+.nav-link {
+  color: var(--primeri-text-color);
+}
+
+/*-------- ASIDE--------------*/
+.aside {
+  background: var(--aside-background-color);
+  grid-column: 1/2;
+  grid-row: 1/ span 7;
+  color: var(--aside-text-color);
+}
+
+.aside__title {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  color: var(--aside-title-color);
+}
+
+/*-------- ABOUT--------------*/
+.about {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+
+/*-------- CODE--------------*/
+.code {
+  grid-row: 3/4;
+  grid-column: 2/3;
+}
+
+pre{
+  margin: 0;
+  background-color: #222;
+}
+
+code {
+  font-family: monospace;
+  color: var(--accent-white);
+}
+
+/*-------- EDUCATION--------------*/
+.education {
+  grid-row: 4/5;
+  grid-column: 2/3;
+}
+
+/*-------- EXPERIENCE--------------*/
+.education {
+  grid-row: 5/6;
+  grid-column: 2/3;
+}
+
+/*-------- LANGUAGES--------------*/
+.education {
+  grid-row: 6/7;
+  grid-column: 2/3;
+}
+
+/*-------- FOOTER--------------*/
+.footer {
+  grid-row: 7/8;
+  grid-column: 2/3;
+}
+
+.footer-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*-------- ADAPTIVE--------------*/
+
+@media (min-width: 768px) {
+
+  /* main {
+    display: flow-root;
+  } */
+
+  .menu-button {
+    display: none;
+  }
+
+  .menu-container {
+    display: contents;
+  }  
+
+  /*-------- HEADER--------------*/
+
+  .page-header {  
+    background-color:  #C48A69;
+  }
+
+  .nav-list {
+    display: flex;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    height: 60px;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .nav-item {
+    margin-right: 10px;
+  }
+
+  /* p {
+    padding-left: 15px;
+  } */
+
+  /*-------- FOOTER--------------*/
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  #C48A69;
+  }
+ }
+
+
+
+
