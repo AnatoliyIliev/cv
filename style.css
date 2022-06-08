@@ -1,7 +1,7 @@
 :root {
-  --primeri-background-color: #f8e2d3;
+  --primeri-background-color: #ffffff;
   --primeri-text-color: #272425;
-  --aside-text-color: #e6ccd8;
+  --aside-text-color: #ffffff;
   --aside-title-color: #e7c195;
   --aside-background-color: #3f4b5a;
   --title-text-color: #757575;
@@ -12,6 +12,7 @@
 h1 {
   text-align: center;
 }
+
 a {
   text-decoration: none; /* Отменяем подчеркивание у ссылки */
   margin: 0;
@@ -57,15 +58,19 @@ body {
   line-height: 1.5;
 
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 1fr 3fr;
   grid-template-rows: 60px 100px 420px 130px 250px 130px 110px;
-
 }  
 
 .container {
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;   
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 hr {
@@ -166,6 +171,12 @@ hr {
   grid-column: 1/2;
   grid-row: 1/ span 7;
   color: var(--aside-text-color);
+  padding-left: 15px;
+  padding-right: 15px; 
+}
+
+.name {
+
 }
 
 .aside__title {
@@ -206,7 +217,11 @@ code {
 /*-------- EXPERIENCE--------------*/
 .education {
   grid-row: 5/6;
-  grid-column: 2/3;
+  grid-column: 2/3;  
+}
+
+.experience__list__item__link {
+  color: var(--primeri-text-color);
 }
 
 /*-------- LANGUAGES--------------*/
@@ -219,6 +234,11 @@ code {
 .footer {
   grid-row: 7/8;
   grid-column: 2/3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color:  #C48A69;
 }
 
 .footer-item {
@@ -267,13 +287,7 @@ code {
     padding-left: 15px;
   } */
 
-  /*-------- FOOTER--------------*/
-  .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color:  #C48A69;
-  }
+
  }
 
 
