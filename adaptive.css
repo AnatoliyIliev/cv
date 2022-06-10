@@ -1,0 +1,61 @@
+/*-------- ADAPTIVE--------------*/
+
+@media (max-width: 768px) {
+
+  /*-------- BUTTON--------------*/
+  .menu-button {
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: transparent;
+    margin-left: 245px;
+  }
+
+  .icon-menu,
+  .icon-close {
+    fill:  var(--primeri-text-color);
+  }
+
+  .icon-close:hover,
+  .icon-close:focus {
+    fill: var(--accent-color);
+  }
+
+  .icon-menu:hover,
+  .icon-menu:focus {
+    fill: var(--accent-color);
+  }
+
+  .menu-button .icon-close {
+    display: none;
+  }
+
+  .menu-button.is-open .icon-close {
+    display: block;
+  }
+
+  .menu-button.is-open .icon-menu {
+    display: none;
+  }
+
+  .menu-container {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    border-top: 1px solid #ececec;
+    left: 8px;
+    width: 95%;
+    height: 220px;
+    text-align: center;
+    background:var(--primeri-background-color);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+
+  .menu-container.is-open{
+    display: block;
+  }
+
+
+}
